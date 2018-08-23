@@ -1,0 +1,95 @@
+.main-form
+	position: relative
+	width: 100%
+	padding-top: 84px
+	h3, p
+		letter-spacing: 0.01em
+		margin-left: -15px
+	h3
+		font-size: 36px
+		line-height: 24px
+		padding-top: 54px
+		font-family: $light-font
+		font-weight: 100
+		margin-bottom: 10px
+	p
+		font-size: 24px
+		line-height: 36px
+		color: #7b818a
+		position: relative
+		&::before
+			background: url("../img/sea-water.svg") no-repeat center
+			content: ''
+			width: 65px
+			height: 20px
+			position: absolute
+			bottom: -37px
+	&__form
+		border: 10px solid #f2f9fc
+		padding: 40px 85px
+		margin-right: -15px
+		.button
+			width: 200px
+			font-size: 16px
+			line-height: 0.018em
+			font-weight: 400
+		&_wrapper
+			margin-bottom: 35px
+
+		&_main
+			width: 270px
+			height: 35px
+			padding-top: 2px
+			border-bottom: 1px solid #caccd0
+			position: relative
+			&:nth-child(1)
+				padding-left: 28px
+				background: url("../../img/man-user.svg") 4px no-repeat
+				margin-right: 30px
+			&:nth-child(2)
+				padding-left: 23px
+				background: url('../../img/black-envelope.svg') no-repeat
+
+		strong
+			&:after
+				content: ""
+				position: absolute
+				display: none
+		&_checkbox
+			display: block
+			position: relative
+			cursor: pointer
+			user-select: none
+			font-size: 12px
+			color: #7b818a
+			line-height: 16px
+			padding-left: 30px
+			padding-top: 10px
+			width: 325px
+			input
+				position: absolute
+				opacity: 0
+				cursor: pointer
+				&:checked ~ strong
+					&:after
+						display: block
+			strong
+				position: absolute
+				top: 13px
+				left: 3px
+				height: 16px
+				width: 16px
+				background-color: #fff
+				border: 1px solid #a4acb4
+				border-radius: 2px
+				&:after
+					left: 5px
+					top: 2px
+					width: 5px
+					height: 9px
+					border: solid #03a6f1
+					border-width: 0 2px 2px 0
+					-webkit-transform: rotate(45deg)
+					-ms-transform: rotate(45deg)
+					transform: rotate(45deg)
+

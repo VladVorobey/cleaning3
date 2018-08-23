@@ -1,0 +1,51 @@
+body
+	display: block
+	position: relative
+	min-width: 320px
+	font-family: $defoult-font
+	font-size: 16px
+	font-weight: 400px
+	min-height: 3000px
+	overflow-x: hidden
+
+
+*
+	margin: 0
+	padding: 0
+	::before, ::after
+		box-sizing: border-box
+a,
+a:focus,
+a:hover
+	outline: none
+	text-decoration: none
+ul
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+.container
+	padding-right: 0
+	padding-left: 0
+
+input[type="text"], input[type="email"]
+	outline: none
+	box-shadow: none
+	-webkit-appearance: none
+	-moz-appearance: none
+	&:focus:required:invalid
+		border-color: $main-color
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+	&:required:valid
+		border-color: #03a6f1
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+	&::placeholder
+		color: $main-color
+		font-size: 18px
+		line-height: 1
+		font-weight: 400
+
