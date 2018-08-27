@@ -1,6 +1,22 @@
 import $ from 'jquery';
 import slick from 'slick-carousel';
 
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 55.737854, lng: 37.8670967},
+    zoom: 16,
+    zoomControl: true,
+    zoomControlOptions: {
+      position: google.maps.ControlPosition.RIGHT_CENTER
+    },
+    mapTypeControl: false,
+    streetViewControl: false,
+    fullscreenControl: false
+  });
+}
+initMap();
+
 $(document).ready(function() {
 	 $('.slider-for').slick({
 	  slidesToShow: 1,
