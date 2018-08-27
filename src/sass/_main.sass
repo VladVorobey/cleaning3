@@ -1,4 +1,4 @@
-body
+body, html
 	display: block
 	position: relative
 	min-width: 320px
@@ -49,3 +49,71 @@ input[type="text"], input[type="email"]
 		line-height: 1
 		font-weight: 400
 
+.button
+	border-radius: 8px
+	background-color: rgb(237, 28, 36)
+	box-shadow: 7.5px 12.99px 25px 0px rgba(237, 28, 36, 0.2)
+	width: 190px
+	height: 48px
+	text-align: center
+	padding: 13px
+	font-family: $bold-font
+	color: #fff
+	letter-spacing: 0.02em
+	cursor: pointer
+	display: block
+	transition: all .3s
+	&:hover
+		transform: translateY(3px)
+		background-color: #03a6f1
+		box-shadow: 10px 10px 25px 0px rgba(237, 28, 36, 0.4)
+		transition: all .3s
+	a
+		color: #fff
+	&_long
+		width: 420px
+		height: 72px
+		font-size: 20px
+		line-height: 42px
+		letter-spacing: 0
+
+.logo
+	padding-top: 10px
+	display: inline-block
+	text-transform: uppercase
+	width: 152px
+	font-size: 32px
+	font-family: $light-font
+	line-height: 15px
+	margin-left: -2px
+	letter-spacing: -0.01em
+	strong
+		font-size: 10px
+		color: $info-color-defoult
+		letter-spacing: 0.1em
+		padding-left: 1px
+	a
+		color: #222222
+		display: block
+
+.info
+	h4
+		font-family: $light-font
+		font-size: 36px
+		font-weight: 100
+		margin-bottom: 56px
+		letter-spacing: -0.01em
+		position: relative
+		&::before
+			background: url("../img/sea-water.svg") no-repeat center
+			content: ''
+			width: 65px
+			height: 20px
+			position: absolute
+			bottom: -32px
+	p
+		max-width: 695px
+		font-size: 16px
+		line-height: 28px
+		color: #7b818a
+		margin-bottom: 55px

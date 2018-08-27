@@ -4,7 +4,8 @@
 	width: 100%
 	min-height: 884px
 	margin-left: -15px
-	background: url("../img/bg-services.png") right no-repeat
+	background: url("../img/bg-services.png") -15% no-repeat
+	background-size: cover
 	margin-right: -15px
 	.services
 		display: block
@@ -15,6 +16,8 @@
 			border: 1px solid #ffffff
 			display: flex
 			width: 100%
+			+r(600)
+				flex-direction: column
 			&_left,&_right
 				width: 50%
 				margin: 87px 0
