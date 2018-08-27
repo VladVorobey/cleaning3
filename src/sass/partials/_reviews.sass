@@ -1,0 +1,31 @@
+.reviews
+	width: 100%
+	position: relative
+	&__block
+		width: 100%
+		min-height: 390px
+		background: url("../../img/reviews-bg.png") left top no-repeat
+		padding-top: 70px
+		position: relative
+		.slick-prev, .slick-next
+			position: absolute
+			width: 36px
+			height: 36px
+			top: 152px
+			border-width: 1px
+			border-color: rgba(22, 36, 50, .2);
+			border-style: solid
+			border-radius: 50%
+		.slick-prev
+			left: 786px
+			z-index: 100000
+			&::before
+				opacity: 1
+				color: $main-color
+				content: url("../../img/prev.png")
+		.slick-next
+			left: 832px
+			z-index: 100000
+			&::before
+				color: $main-color
+				content: url("../../img/next.png")

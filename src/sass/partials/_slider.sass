@@ -1,0 +1,87 @@
+.slider-screen
+	min-height: 720px
+	width: 100%
+	background: #00247c
+
+	&__info
+		padding-top: 113px
+		padding-left: 15px
+		padding-right: 15px
+		color: #ffffff
+		margin-bottom: 96px
+.my-slider
+	&__section
+		height: 720px
+		li
+			height: 310px
+			width: 510px
+			margin-top: 23px
+			margin-bottom: 23px
+			img
+				margin-left: 70px
+				width: 430px
+				height: 310px
+				transition: all .6s
+				opacity: .2
+				border-radius: 8px
+		.slick-current
+			li
+				img
+					transition: all .6s
+					margin-left: 32px
+					width: 510px
+					height: 310px
+					opacity: 1
+		+r(767)
+			display: none
+	&__block
+		li
+			color: #ffffff
+			display: block
+			width: 535px
+			padding-left: 15px
+			h5
+				font-size: 20px
+				font-family: $medium-font
+				font-weight: 500
+				line-height: 30px
+				max-width: 350px
+				margin-bottom: 30px
+			p
+				font-size: 18px
+				line-height: 30px
+				color: #a0aed0
+			strong
+				color: #ffffff
+				font-size: 16px
+				margin-top: 37px
+				margin-left: 22px
+				display: block
+				font-weight: 400
+				position: relative
+				img
+					width: 16px
+					height: 16px
+					position: absolute
+					left: -22px
+
+
+		.slick-prev, .slick-next
+			position: absolute
+			width: 36px
+			height: 36px
+			top: 365px
+			border-width: 1px
+			border-color: rgba(3, 166, 241, .2)
+			border-style: solid
+			border-radius: 50%
+		.slick-prev
+			left: 17px
+			&::before
+				opacity: 1
+				content: url("../../img/prev_w.png")
+		.slick-next
+			left: 62px
+			&::before
+				opacity: 1
+				content: url("../../img/next_w.png")
