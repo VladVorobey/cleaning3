@@ -125,17 +125,20 @@
 	min-height: auto
 	+r(430)
 		width: 100%
-	.close-servises
-		font-size:  50px
-		color: red
-		position: absolute
-		right: 20px
-		top: 0
-		+r(425)
-			display: none
+	//.close-servises
+	//	//	font-size:  50px
+	//	//	color: red
+	//	//	position: absolute
+	//	//	right: 20px
+	//	//	top: 0
+	//	//	+r(425)
+	//	//		display: none
 	.services-text
 		padding-top: 50px
 	.services
+		&__block
+			+r(1200)
+				display: none
 		&__elem
 			position: relative
 			+r(430)

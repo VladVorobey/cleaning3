@@ -92,15 +92,24 @@ $(document).ready(function() {
     $('.popup-modal').magnificPopup({
       type: 'inline',
       preloader: false,
-      focus: '#username',
-      modal: true
+      focus: '#modal-form',
     });
     $(document).on('click', '.popup-modal-dismiss', function(e) {
       e.preventDefault();
       $.magnificPopup.close();
     });
   });
-
+  $(function() {
+    $('.modal-servises').magnificPopup({
+      type: 'inline',
+      preloader: false,
+      focus: '#modal-servises'
+    });
+    $(document).on('click', '.popup-modal-dismiss', function(e) {
+      e.preventDefault();
+      $.magnificPopup.close();
+    });
+  });
   //----- menu ------
   $('.menu__btn, nav').click(function() {
     $('header').toggleClass('active'),
