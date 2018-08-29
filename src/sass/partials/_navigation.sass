@@ -5,12 +5,31 @@ header
 	position: fixed
 	z-index: 99
 	background: $header-bg-color
-
+	+r(610)
+		height: 100%
+		transform: translate(102vw, -102vw)
+		transition: all .25s
+		&.active
+			transform: translateX(0)
+			transition: all .25s
 .nav
+	display: flex
+	justify-content: space-between
+	align-items: center
 	width: 100%
 	min-height: 46px
 	font-family: $medium-font
 	font-size: 14px
+	+r(610)
+		height: 100%
+		flex-direction: column
+		overflow-y: scroll
+		a
+			display: block
+			text-align: center
+			width: 100vw
+			margin: 2% auto
+			color: $main-color
 	a
 		position: relative
 		display: block
@@ -34,13 +53,87 @@ header
 			padding-right: 6px
 
 	&_footer
-		height: 110px
+		height: 120px
 		width: 330px
+		padding-top: 5px
+		padding-bottom: 5px
+		margin-left: 130px
+		align-items: start
+		display: flex
+		justify-content: space-between
+		flex-direction: column
+		flex-wrap: wrap
 		a
-			padding: 11px 0 0 0
-			text-align: left
+			display: block
+			padding: 5px 0
 			color: #a0aed0
 			&:hover, &:focus
 				color: #ffffff
 				&::before
 					transform: scale(0)
+			&:nth-child(n+5)
+				&:nth-child(-n+9)
+					padding-left: 30px
+		+r(998)
+			margin: 0
+			align-items: center
+		+r(610)
+			a
+				text-align: center
+				color: #a0aed0
+				margin: 4px
+				padding: 0
+				&:nth-child(n+5)
+					&:nth-child(-n+9)
+						padding-left: 0
+.menu__btn
+	display: none
+	width: 50px
+	min-height: 50px
+	position: fixed
+	top: 0
+	right: 0
+	background-color: $header-bg-color
+	z-index: 101
+	+r(610)
+		display: block
+		&.active
+			.bar
+				transition: all .25s
+				background-color: transparent
+				&:before
+					transition: all .25s
+					transform: rotate(45deg)
+					top: 0
+
+				&:after
+					top: 0
+					transition: all .25s
+					transform: rotate(-45deg)
+	.bar
+		position: fixed
+		right: 4px
+		top: 25px
+		transition: all .25s
+		content: ""
+		height: 3px
+		width: 40px
+		background-color: $main-color
+		&:before
+			top: -8px
+			transition: all .25s
+			content: ""
+			position: absolute
+			right: 0
+			height: 3px
+			width: 40px
+			background-color: $main-color
+		&:after
+			top: 8px
+			transition: all .25s
+			content: ""
+			position: absolute
+			right: 0
+			height: 3px
+			width: 40px
+			background-color: $main-color

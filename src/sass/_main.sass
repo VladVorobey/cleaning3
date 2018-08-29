@@ -56,7 +56,6 @@ input[type="text"], input[type="email"]
 	width: 190px
 	height: 48px
 	text-align: center
-	padding: 13px
 	font-family: $bold-font
 	color: #fff
 	letter-spacing: 0.02em
@@ -65,19 +64,33 @@ input[type="text"], input[type="email"]
 	transition: all .3s
 	&:hover
 		transform: translateY(3px)
-		background-color: #03a6f1
-		box-shadow: 10px 10px 25px 0px rgba(237, 28, 36, 0.4)
+		background-color: rgb(3, 166, 241)
+		box-shadow: 10px 10px 25px 0px rgba(3, 166, 241, 0.2)
 		transition: all .3s
 	a
+		padding: 13px
 		color: #fff
+		display: block
+
 	&_long
 		width: 420px
 		height: 72px
 		font-size: 20px
 		line-height: 42px
 		letter-spacing: 0
+		+r(450)
+			width: 320px
+			margin: 0 auto
+			a
+				font-size: 16px
+		+r(370)
+			width: 280px
+			a
+				font-size: 14px
 	&_footer
 		margin-top: 40px
+		margin-left: 60px
+		width: 180px
 .logo
 	padding-top: 10px
 	display: inline-block
@@ -97,8 +110,12 @@ input[type="text"], input[type="email"]
 		color: #222222
 		display: block
 	&_footer
+		margin-left: 8px
 		a
 			color: #ffffff
+		+r(610)
+			margin-bottom: 20px
+			margin-left: 0
 .info
 	h4
 		font-family: $light-font
@@ -114,12 +131,16 @@ input[type="text"], input[type="email"]
 			height: 20px
 			position: absolute
 			bottom: -32px
+		+r(600)
+			font-size: 24px
 	p
 		max-width: 695px
 		font-size: 16px
 		line-height: 28px
 		color: #7b818a
 		margin-bottom: 55px
+		+r(1199)
+			max-width: none
 	&_reviews
 		padding-top: 22px
 		padding-left: 2px
