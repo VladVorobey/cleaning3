@@ -93,14 +93,18 @@ $(document).ready(function() {
       type: 'inline',
       preloader: false,
       focus: '#modal-form',
+      modal: true
     });
     $(document).on('click', '.popup-modal-dismiss', function(e) {
       e.preventDefault();
       $.magnificPopup.close();
     });
   });
+
+
+
   $(function() {
-    $('.modal-servises').magnificPopup({
+    $('.popup-modal__servises').magnificPopup({
       type: 'inline',
       preloader: false,
       focus: '#modal-servises'
