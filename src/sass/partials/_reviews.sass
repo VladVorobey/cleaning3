@@ -4,6 +4,9 @@
 	display: flex
 	+r(767)
 		display: none
+	img
+		width: 240px
+		height: 335px
 	&__block
 		width: 100%
 		min-height: 390px
@@ -23,7 +26,7 @@
 			+r(1200)
 				left: 106%
 			+r(992)
-				left: 104%
+				left: 122%
 			&::before
 				opacity: 1
 				color: $main-color
@@ -31,6 +34,8 @@
 		.slick-next
 			left: 113%
 			z-index: 30
+			+r(992)
+				left: 132%
 			&::before
 				opacity: 1
 				color: $main-color

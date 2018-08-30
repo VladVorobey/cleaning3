@@ -27,10 +27,16 @@ ul
 .container
 	padding-right: 0
 	padding-left: 0
-
+input
+	border-radius: 0
+	box-shadow: none
+	appearance: none
 input[type="text"], input[type="email"]
 	outline: none
 	box-shadow: none
+	border-radius: 0
+	-moz-border-radius: 0
+	-webkit-border-radius: 0
 	-webkit-appearance: none
 	-moz-appearance: none
 	&:focus:required:invalid
@@ -45,9 +51,10 @@ input[type="text"], input[type="email"]
 		-webkit-appearance: none
 	&::placeholder
 		color: $main-color
-		font-size: 18px
+		font-size: 16px
 		line-height: 1
 		font-weight: 400
+
 
 .button
 	border-radius: 8px
@@ -78,6 +85,8 @@ input[type="text"], input[type="email"]
 		font-size: 20px
 		line-height: 42px
 		letter-spacing: 0
+		+r(1200)
+			width: 400px
 		+r(992)
 			margin: 0 auto
 		+r(450)

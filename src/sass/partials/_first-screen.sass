@@ -8,18 +8,15 @@
 	position: relative
 	text-align: center
 	+r(992)
-		padding-top: 30px
-		padding-bottom: 30px
+		padding-top: 40px
+		padding-bottom: 15px
 		min-height: auto
-	+r(425)
-		padding-top: 20px
-		padding-bottom: 20px
+
 	h1,h2
 		font-size: 36px
 		color: $main-color
 		max-width: 700px
 		margin: 0 auto 37px
-		padding-left: 50px
 		+r(1200)
 			padding-left: 0
 		+r(768)
@@ -31,8 +28,8 @@
 		line-height: 36px
 		letter-spacing: 0.01em
 		color: #6a707a
-		margin-bottom: 115px
-		padding-left: 50px
+		margin: 0 auto 115px
+		max-width: 750px
 		+r(1200)
 			padding-left: 0
 		+r(768)
@@ -52,7 +49,6 @@
 		+r(992)
 			margin-bottom: 0
 		+r(767)
-			margin-bottom: 0
 			flex-direction: column
 			align-items: center
 
@@ -69,28 +65,25 @@
 			color: #fefefe
 			margin: 0 16px
 			transition: all .3s
+			margin-bottom: 25px
 			&:last-child
 				background-color: rgb(0, 36, 124)
 				box-shadow: 10px 17.321px 30px 0 rgba(0, 36, 124, 0.3)
 				+r(425)
-					margin-bottom: 0
+					margin-bottom: 35px
 			&:hover
 				transform: translateY(3px)
 				box-shadow: 10px 17.321px 30px 0 rgba(73, 175, 236, 0.6)
 				&:last-child
 					box-shadow: 10px 17.321px 30px 0 rgba(0, 36, 124, 0.6)
 
-			+r(767)
-				margin-bottom: 25px
 	&__nav
 		color: $main-color
 		position: absolute
-		z-index: 99
+		z-index: 30
 		+r(1199)
-			position: relative
-			left: 0
-		+r(992)
 			display: none
+
 		li
 			margin: 10px auto
 			text-align: left

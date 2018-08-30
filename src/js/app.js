@@ -38,7 +38,9 @@ $(document).ready(function() {
 	  focusOnSelect: true,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 3000
+    autoplaySpeed: 3000,
+
+
   });
   $('.reviews__slider').slick({
     slidesToShow: 3,

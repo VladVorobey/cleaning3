@@ -4,11 +4,9 @@
 	background: #00247c
 	+r(767)
 		min-height: auto
-		padding-top: 30px
-		padding-bottom: 30px
-	+r(425)
-		padding-top: 20px
-		padding-bottom: 20px
+		padding-top: 40px
+		padding-bottom: 40px
+
 	&__info
 		padding-top: 113px
 		padding-left: 15px
@@ -35,6 +33,12 @@
 				transition: all .6s
 				opacity: .2
 				border-radius: 8px
+				+r(1200)
+					width: 370px
+					margin-left: 30px
+				+r(992)
+					width: 320px
+					margin-left: 15px
 		.slick-current
 			li
 				img
@@ -43,6 +47,12 @@
 					width: 510px
 					height: 310px
 					opacity: 1
+					+r(1200)
+						width: 430px
+						margin-left: 0
+					+r(992)
+						width: 340px
+						margin-left: 0
 		+r(767)
 			display: none
 	&__block
@@ -96,8 +106,20 @@
 			&::before
 				opacity: 1
 				content: url("../../img/prev.svg")
+			+r(991)
+				left: 40%
+				transform: translateX(-60%)
+			+r(767)
+				left: 45%
+				transform: translateX(-55%)
 		.slick-next
 			left: 62px
 			&::before
 				opacity: 1
 				content: url("../../img/next.svg")
+			+r(991)
+				left: 60%
+				transform: translateX(-40%)
+			+r(767)
+				left: 55%
+				transform: translateX(-45%)
