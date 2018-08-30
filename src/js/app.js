@@ -44,8 +44,28 @@ $(document).ready(function() {
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
-    autoplay: true,
-    autoplaySpeed: 5000
+
+    // autoplay: true,
+    // autoplaySpeed: 5000
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          centerMode: true,
+          centerPadding: '100px'
+        }
+      },
+    ]
   });
   //------- FIRST SCREEN SLIDER -------------
   $('.first-screen__nav').slick({
@@ -57,6 +77,30 @@ $(document).ready(function() {
     centerMode: true,
     // fade: true,
     asNavFor: '.first-screen__elem',
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          arrows: true,
+          focusOnSelect: true,
+          vertical: true,
+          centerMode: true,
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          arrows: true,
+          focusOnSelect: true,
+          vertical: true,
+          centerMode: true,
+        }
+      },
+    ]
   });
   $('.first-screen__elem').slick({
     slidesToShow: 1,
@@ -67,6 +111,40 @@ $(document).ready(function() {
     arrows: false,
     // autoplay: true,
     // autoplaySpeed: 5000
+  });
+  //-------- CLIENTS ----------
+
+
+  $('.clients__main').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true
+        }
+      }
+    ]
   });
 
   //--------- ANCHOR --------------------
@@ -88,32 +166,62 @@ $(document).ready(function() {
     $('.preloader').delay(1000).fadeOut('slow');
   });
   //--------------- MODAL -------------------
-  $(function() {
-    $('.popup-modal').magnificPopup({
-      type: 'inline',
-      preloader: false,
-      focus: '#modal-form',
-      modal: true
-    });
-    $(document).on('click', '.popup-modal-dismiss', function(e) {
-      e.preventDefault();
-      $.magnificPopup.close();
-    });
+
+
+  $('.popup-modal').magnificPopup({
+    type: 'inline',
+    preloader: false,
+    closeOnBgClick: true,
+    removalDelay: 300,
+    closeBtnInside: false,
+    showCloseBtn: true,
+    mainClass: 'my-mfp-zoom-in',
+    focus: '.focus_contact'
+    //modal: true
+  });
+  $(document).on('click', '.popup-modal-dismiss', function(e) {
+    e.preventDefault();
+    $.magnificPopup.close();
+  });
+
+
+  let modalDataContentDescription;
+  let modalDataContentTitle;
+  let modalDataContentSubTitle;
+  let modalDataContentLink;
+
+  $('.content_data').click(function() {
+    modalDataContentDescription = $(this).attr('data-content-description');
+    modalDataContentTitle = $(this).attr('data-content-title');
+    modalDataContentSubTitle = $(this).attr('data-content-sub-title');
+    modalDataContentLink = $(this).attr('data-content-link');
+  });
+
+
+  $('.popup-modal__servises').magnificPopup({
+    type: 'inline',
+    preloader: false,
+    removalDelay: 300,
+    mainClass: 'my-mfp-zoom-in',
+    closeBtnInside: false,
+    showCloseBtn: false,
+    callbacks: {
+      beforeOpen: function() {
+        $('.js-data-descripteon-inner').html(modalDataContentDescription);
+        $('.js-data-title-inner').html(modalDataContentTitle);
+        $('.js-data-sub-title-inner').html(modalDataContentSubTitle);
+        $('a[href].js-data-link-inner').attr('href', modalDataContentLink);
+      }
+    }
+  });
+
+  $(document).on('click', '.js_this_close', function(e) {
+    e.preventDefault();
+    $.magnificPopup.close('.popup-modal__servises');
   });
 
 
 
-  $(function() {
-    $('.popup-modal__servises').magnificPopup({
-      type: 'inline',
-      preloader: false,
-      focus: '#modal-servises'
-    });
-    $(document).on('click', '.popup-modal-dismiss', function(e) {
-      e.preventDefault();
-      $.magnificPopup.close();
-    });
-  });
   //----- menu ------
   $('.menu__btn, nav').click(function() {
     $('header').toggleClass('active'),

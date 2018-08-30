@@ -10,11 +10,10 @@
     <link rel="stylesheet" media="all" href="css/app.css" /> </head>
   <body>
     <!-- BEGIN content -->
-    <!--<div class="preloader">
-  <div class="pulse"></div>
-</div>
--->
-    <div id="modal-form" class="mfp-hide white-popup-block modal-form">
+    <div class="preloader">
+      <div class="pulse"></div>
+    </div>
+    <div id="modal-form" class="mfp-hide white-popup-block modal-form zoom-anim-dialog">
       <p>
         <a class="popup-modal-dismiss close" href="#">x</a>
       </p>
@@ -27,7 +26,7 @@
         <input type="hidden" name="admin_email" value="sparrowvladislav@gmail.com">
         <input type="hidden" name="form_subject" value="Заявка с формы">
         <div class="main-form__form_wrapper d-flex flex-column align-items-center">
-          <input class="main-form__form_main" type="text" name="name" placeholder="Введите Имя" required>
+          <input class="main-form__form_main focus_contact" type="text" name="name" placeholder="Введите Имя" required>
           <input class="main-form__form_main" type="email" name="email" placeholder="Введите E-mail" required> </div>
         <div class="main-form__form_flex d-flex flex-column align-items-center">
           <button type="submit" class="button" name="submit">Отправить заявку</button>
@@ -36,11 +35,13 @@
         </div>
       </form>
     </div>
-    <div id="modal-servises" class="mfp-hide white-popup-block modal-servises">
-      <!--<p><a class="popup-modal-dismiss close close-servises" href="#modal-form">x</a></p>-->
+    <div id="modal-servises" class="mfp-hide white-popup-block modal-servises zoom-anim-dialog">
+      <p>
+        <a class="popup-modal-dismiss close close-servises" href="#modal-form">x</a>
+      </p>
       <div class="container">
         <div class="row">
-          <div class="col-xl-7">
+          <div class="col-lg-7">
             <div class="services">
               <div class="services__block">
                 <div class="services__block_left">
@@ -80,19 +81,18 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-5">
+          <div class="col-lg-5">
             <div class="services-text">
-              <h3> Оказываем услуги
+              <h3 class="js-data-title-inner"> Оказываем услуги
                 <br> по клинингу и химчистке </h3>
-              <strong> квартир, коттеджей и офисов </strong>
-              <p> Наша клининговая компания предлагает услуги по уборка внутренних помещений, уборке прилегающей территории, мытью окон и фасадов методом промыш- ленного альпинизма, очистке кровли от снега и сосулек в зимний период, а также вывоза снега и
+              <strong class="js-data-sub-title-inner"> квартир, коттеджей и офисов </strong>
+              <p class="js-data-descripteon-inner"> Наша клининговая компания предлагает услуги по уборка внутренних помещений, уборке прилегающей территории, мытью окон и фасадов методом промыш- ленного альпинизма, очистке кровли от снега и сосулек в зимний период, а также вывоза снега и
                 мусора </p>
-              <a href=""></a>
               <div class="button modal-servises__button">
-                <a class="popup-modal-dismiss close" href="#">Подробниее</a>
+                <a class="js-data-link-inner" href="#">Подробниее</a>
               </div>
-              <div class="button modal-servises__button">
-                <a class="popup-modal close " href="#modal-form">Оформить заявку</a>
+              <div class="button js_this_close modal-servises__button">
+                <a class="popup-modal" href="#modal-form">Оформить заявку</a>
               </div>
             </div>
           </div>
@@ -103,14 +103,32 @@
       <div class="container">
         <div class="row">
           <nav class="nav">
-            <a href="#Home"> Главная </a>
-            <a href="#Advantage"> Преимущества </a>
-            <a href="#Services"> Услуги </a>
-            <a href="#About"> О нас </a>
-            <a href="#Objects"> Обьекты </a>
-            <a href="#Partners"> Партнеры </a>
-            <a href="#Reviews"> Отзывы </a>
-            <a href="#Contacts"> Контакты </a>
+            <ul>
+              <li>
+                <a href="#Home"> Главная </a>
+              </li>
+              <li>
+                <a href="#Advantage"> Преимущества </a>
+              </li>
+              <li>
+                <a href="#Services"> Услуги </a>
+              </li>
+              <li>
+                <a href="#About"> О нас </a>
+              </li>
+              <li>
+                <a href="#Objects"> Обьекты </a>
+              </li>
+              <li>
+                <a href="#Partners"> Партнеры </a>
+              </li>
+              <li>
+                <a href="#Reviews"> Отзывы </a>
+              </li>
+              <li>
+                <a href="#Contacts"> Контакты </a>
+              </li>
+            </ul>
           </nav>
         </div>
       </div>
@@ -118,52 +136,40 @@
     <div class="menu__btn">
       <div class="bar"></div>
     </div>
-    <!--<div class="info-line" id="Home">
-  <div class="container">
-    <div class="row">
-      <div class="info-line__wrapper">
-        <div class="logo">
-          <a href="#"> Cleaning
-          <strong>
-            клининговая компания
-          </strong>
-          </a>
-        </div>
-        <div class="info-line__work-schedule">
-          <img src="/img/clock.svg" alt="">
-          График работы офиса
-          <p>
-            Пн-Пт с 10:00 до 19:00
-            <br>
-            Сб-Вс с 10:00 до 17:00
-          </p>
-        </div>
-        <div class="info-line__address">
-          <img src="/img/placeholder-filled-point.svg" alt="">
-          Адрес
-          <p>
-            Москва, ул. Новокосинская,
-            <br>
-            д. 20, корп. 2, пом. 1Б
-          </p>
-        </div>
-        <div class="info-line__tel">
-          <img src="/img/call-answer.svg" alt="">
-          Телефон
-          <p>8 (495) 134 22 49</p>
-        </div>
-        <div class="button">
-          <a class="popup-modal" href="#modal-form">Оставить заявку</a>
+    <div class="info-line" id="Home">
+      <div class="container">
+        <div class="row">
+          <div class="info-line__wrapper">
+            <div class="logo">
+              <a href="#"> Cleaning
+                <strong> клининговая компания </strong>
+              </a>
+            </div>
+            <div class="info-line__work-schedule">
+              <img src="/img/clock.svg" alt=""> График работы офиса
+              <p> Пн-Пт с 10:00 до 19:00
+                <br> Сб-Вс с 10:00 до 17:00 </p>
+            </div>
+            <div class="info-line__address">
+              <img src="/img/placeholder-filled-point.svg" alt=""> Адрес
+              <p> Москва, ул. Новокосинская,
+                <br> д. 20, корп. 2, пом. 1Б </p>
+            </div>
+            <div class="info-line__tel">
+              <img src="/img/call-answer.svg" alt=""> Телефон
+              <p>8 (495) 134 22 49</p>
+            </div>
+            <div class="button">
+              <a class="popup-modal" href="#modal-form">Оставить заявку</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
--->
     <!--<section class="first-screen">
   <div class="container">
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-3">
         <ul class="first-screen__nav">
 
           <li>Клининг</li>
@@ -174,7 +180,7 @@
 
         </ul>
       </div>
-      <div class="col-md-10">
+      <div class="col-12 col-lg-9 col-xl-12">
         <ul class="first-screen__elem">
           <li>
             <div class="container">
@@ -193,7 +199,7 @@
                 <div class="col-xl-12">
                   <div class="first-screen__buttons">
                     <a href="/clining.html">Подробнее</a>
-                    <a href="#">Заказать услугу</a>
+                    <a class="popup-modal" href="#modal-form">Заказать услугу</a>
                   </div>
                 </div>
               </div>
@@ -216,7 +222,7 @@
                 <div class="col-xl-12">
                   <div class="first-screen__buttons">
                     <a href="#">Подробнее</a>
-                    <a href="#">Заказать услугу</a>
+                    <a class="popup-modal" href="#modal-form">Заказать услугу</a>
                   </div>
                 </div>
               </div>
@@ -239,7 +245,7 @@
                 <div class="col-xl-12">
                   <div class="first-screen__buttons">
                     <a href="#">Подробнее</a>
-                    <a href="#">Заказать услугу</a>
+                    <a class="popup-modal" href="#modal-form">Заказать услугу</a>
                   </div>
                 </div>
               </div>
@@ -262,7 +268,7 @@
                 <div class="col-xl-12">
                   <div class="first-screen__buttons">
                     <a href="#">Подробнее</a>
-                    <a href="#">Заказать услугу</a>
+                    <a class="popup-modal" href="#modal-form">Заказать услугу</a>
                   </div>
                 </div>
               </div>
@@ -285,7 +291,7 @@
                 <div class="col-xl-12">
                   <div class="first-screen__buttons">
                     <a href="#">Подробнее</a>
-                    <a href="#">Заказать услугу</a>
+                    <a class="popup-modal" href="#modal-form">Заказать услугу</a>
                   </div>
                 </div>
               </div>
@@ -299,16 +305,11 @@
 
 </section>
 
-<!--<div class="container">-->
-    <!--<div class="row">-->
-    <!--<div class="col-12">-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->-->
+-->
     <section class="second-screen" id="Advantage">
       <div class="container">
         <div class="row">
-          <div class="col-xl-7">
+          <div class="col-lg-7">
             <div class="services">
               <div class="services__block">
                 <div class="services__block_left">
@@ -348,7 +349,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-5">
+          <div class="col-lg-5">
             <div class="services-text">
               <h3> Оказываем услуги
                 <br> по клинингу и химчистке </h3>
@@ -406,7 +407,7 @@
           <div class="col-xl-6">
             <div class="our-services__tile">
               <div class="row d-flex justify-content-center">
-                <div class="col-xl-12">
+                <div class="col-lg-12 col-md-12">
                   <div class="tile__block tile__block_long tile__block_one">
                     <h5> Клининговые услуги </h5>
                     <ul>
@@ -416,11 +417,15 @@
                       <li> Очистка кровли и сосулек в зимний период </li>
                     </ul>
                     <div class="btn">
-                      <a class="popup-modal__servises" href="#modal-servises">Подробнее</a>
+                      <a class="popup-modal__servises content_data" href="#modal-servises" data-content-link="/clining.html" data-content-title="Заголовок 1" data-content-sub-title="подзаголовок для текста" data-content-description="Наша клининговая компания предлагает услуги по уборка
+                        внутренних помещений, уборке прилегающей территории,
+                        мытью окон и фасадов методом промыш- ленного альпинизма,
+                        очистке кровли от снега и сосулек в зимний период,
+                        а также вывоза снега и мусора">Подробнее</a>
                     </div>
                   </div>
                 </div>
-                <div class="col-xl-6">
+                <div class="col-lg-6 col-md-6 col-sm-6">
                   <div class="tile__block tile__block_short tile__block_two">
                     <h5> Противопожарные системы </h5>
                     <ul>
@@ -430,15 +435,17 @@
                       <li> Автоматическое пожаротушение </li>
                     </ul>
                     <div class="btn">
-                      <a class="popup-modal__servises" href="#modal-servises">Подробнее</a>
+                      <a class="popup-modal__servises content_data" href="#modal-servises" data-content-title="Заголовок 2" data-content-sub-title="подзаголовок для текста" data-content-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam vero."
+                        data-content-link="#">Подробнее</a>
                     </div>
                   </div>
                 </div>
-                <div class="col-xl-6">
+                <div class="col-lg-6 col-sm-6">
                   <div class="tile__block tile__block_short tile__block_three">
                     <h5> Системы теплоснабжения </h5>
                     <div class="btn">
-                      <a class="popup-modal__servises" href="#modal-servises">Подробнее</a>
+                      <a class="popup-modal__servises content_data" href="#modal-servises" data-content-title="Заголовок 3" data-content-sub-title="подзаголовок для текста" data-content-description="Consequatur rerum amet fuga expedita sunt et tempora saepe? Iusto nihil explicabo perferendis quos provident delectus ducimus necessitatibus reiciendis "
+                        data-content-link="#">Подробнее</a>
                     </div>
                   </div>
                 </div>
@@ -448,7 +455,7 @@
           <div class="col-xl-6">
             <div class="our-services__tile">
               <div class="row">
-                <div class="col-xl-6">
+                <div class="col-lg-6 col-md-6 col-sm-6">
                   <div class="tile__block tile__block_short tile__block_four">
                     <h5> Системы безопасности </h5>
                     <ul>
@@ -457,19 +464,21 @@
                       <li> Охранная сигнализация </li>
                     </ul>
                     <div class="btn">
-                      <a class="popup-modal__servises" href="#modal-servises">Подробнее</a>
+                      <a class="popup-modal__servises content_data" href="#modal-servises" data-content-title="Заголовок 4" data-content-sub-title="подзаголовок для текста" data-content-description="Tenetur quod quidem in voluptatem corporis dolorum dicta sit pariatur porro quaerat autem ipsam odit quam beatae tempora quibusdam illum! Modi velit odio nam nulla unde amet odit pariatur at!"
+                        data-content-link="#">Подробнее</a>
                     </div>
                   </div>
                 </div>
-                <div class="col-xl-6">
+                <div class="col-lg-6 col-md-6 col-sm-6">
                   <div class="tile__block tile__block_short tile__block_five">
                     <h5> Эксплуатация и обслуживание объектов инженерной инфраструктуры </h5>
                     <div class="btn">
-                      <a class="popup-modal__servises" href="#modal-servises">Подробнее</a>
+                      <a class="popup-modal__servises content_data" href="#modal-servises" data-content-title="Заголовок 5" data-content-sub-title="подзаголовок для текста" data-content-description="dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum ali"
+                        data-content-link="#">Подробнее</a>
                     </div>
                   </div>
                 </div>
-                <div class="col-xl-12">
+                <div class="col-lg-12 col-md-12">
                   <div class="tile__block tile__block_long tile__block_six">
                     <h5> Системы электроснабжения </h5>
                     <ul>
@@ -477,7 +486,8 @@
                         <li> Электроосвещение </li>
                     </ul>
                     <div class="btn">
-                      <a class="popup-modal__servises" href="#modal-servises">Подробнее</a>
+                      <a class="popup-modal__servises content_data" href="#modal-servises" data-content-title="Заголовок 6" data-content-sub-title="подзаголовок для текста" data-content-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?"
+                        data-content-link="#">Подробнее</a>
                     </div>
                   </div>
                 </div>
@@ -504,9 +514,7 @@
               <h4> Немного о нас </h4>
               <p> Клининговая компания в Москве, сотрудники которой любят и умеют делать то, что большинству из нас совершенно не по душе, - убирать. Мы избавляем клиентов от необходимости тратить долгожданные выходные на скучное и трудное дело - наведение
                 порядка. </p>
-              <p> Заказав уборку в клининговой компании, вы сможете
-                <br> с интересом провести досуг или просто отдохнуть.
-                <br> А все заботы мы с удовольствием возьмем на себя </p>
+              <p> Заказав уборку в клининговой компании, вы сможете с интересом провести досуг или просто отдохнуть. А все заботы мы с удовольствием возьмем на себя </p>
               <div class="button button_long">
                 <a class="popup-modal" href="#modal-form">Запрос коммерческого предложения</a>
               </div>
@@ -585,7 +593,7 @@
       <div class="container">
         <div class="reviews__block">
           <div class="row">
-            <div class="col-xl-8">
+            <div class="col-8">
               <div class="reviews__slider">
                 <div class="img">
                   <a href="#" download="reviews.docx">
@@ -605,7 +613,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-4 order-1">
+            <div class="col-4 order-1">
               <div class="info info_reviews reviews__title">
                 <h4> Отзывы клиентов </h4>
               </div>
@@ -671,14 +679,32 @@
                 </a>
               </div>
               <div class="nav nav_footer">
-                <a href="#Home"> Главная </a>
-                <a href="#Advantage"> Преимущества </a>
-                <a href="#Services"> Услуги </a>
-                <a href="#About"> О нас </a>
-                <a href="#Objects"> Обьекты </a>
-                <a href="#Partners"> Партнеры </a>
-                <a href="#Reviews"> Отзывы </a>
-                <a href="#Contacts"> Контакты </a>
+                <ul>
+                  <li>
+                    <a href="#Home"> Главная </a>
+                  </li>
+                  <li>
+                    <a href="#Advantage"> Преимущества </a>
+                  </li>
+                  <li>
+                    <a href="#Services"> Услуги </a>
+                  </li>
+                  <li>
+                    <a href="#About"> О нас </a>
+                  </li>
+                  <li>
+                    <a href="#Objects"> Обьекты </a>
+                  </li>
+                  <li>
+                    <a href="#Partners"> Партнеры </a>
+                  </li>
+                  <li>
+                    <a href="#Reviews"> Отзывы </a>
+                  </li>
+                  <li>
+                    <a href="#Contacts"> Контакты </a>
+                  </li>
+                </ul>
               </div>
               <div class="work-schedule"> График работы офиса
                 <p> Пн-Пт с 10:00 до 19:00

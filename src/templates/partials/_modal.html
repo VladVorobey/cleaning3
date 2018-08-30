@@ -1,4 +1,4 @@
-<div id="modal-form" class="mfp-hide white-popup-block modal-form">
+<div id="modal-form" class="mfp-hide white-popup-block modal-form zoom-anim-dialog">
   <p><a class="popup-modal-dismiss close" href="#">x</a></p>
   <h5>
     Оставьте заявку,<br>
@@ -10,7 +10,7 @@
     <input type="hidden" name="form_subject" value="Заявка с формы">
     <div class="main-form__form_wrapper d-flex flex-column align-items-center">
 
-      <input class="main-form__form_main" type="text" name="name" placeholder="Введите Имя" required >
+      <input class="main-form__form_main focus_contact" type="text" name="name" placeholder="Введите Имя" required >
       <input class="main-form__form_main" type="email" name="email" placeholder="Введите E-mail" required >
 
     </div>
@@ -27,11 +27,11 @@
 </div>
 
 
-<div id="modal-servises" class="mfp-hide white-popup-block modal-servises">
-  <!--<p><a class="popup-modal-dismiss close close-servises" href="#modal-form">x</a></p>-->
+<div id="modal-servises" class="mfp-hide white-popup-block modal-servises zoom-anim-dialog">
+  <p><a class="popup-modal-dismiss close close-servises" href="#modal-form">x</a></p>
     <div class="container">
       <div class="row">
-        <div class="col-xl-7">
+        <div class="col-lg-7">
           <div class="services">
             <div class="services__block">
               <div class="services__block_left">
@@ -101,18 +101,18 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-5">
+        <div class="col-lg-5">
           <div class="services-text">
-            <h3>
+            <h3 class="js-data-title-inner">
               Оказываем услуги
               <br>
               по клинингу и химчистке
             </h3>
-            <strong>
+            <strong class="js-data-sub-title-inner">
               квартир, коттеджей и офисов
             </strong>
 
-            <p>
+            <p class="js-data-descripteon-inner">
               Наша клининговая компания предлагает услуги по уборка
               внутренних помещений, уборке прилегающей территории,
               мытью окон и фасадов методом промыш- ленного альпинизма,
@@ -120,12 +120,11 @@
               а также вывоза снега и мусора
             </p>
 
-            <a href=""></a>
             <div class="button modal-servises__button">
-              <a class="popup-modal-dismiss close" href="#">Подробниее</a>
+              <a class="js-data-link-inner" href="#">Подробниее</a>
             </div>
-            <div class="button modal-servises__button">
-              <a class="popup-modal close " href="#modal-form">Оформить заявку</a>
+            <div class="button js_this_close modal-servises__button">
+              <a class="popup-modal" href="#modal-form">Оформить заявку</a>
             </div>
 
           </div>

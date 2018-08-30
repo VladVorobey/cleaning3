@@ -2,13 +2,24 @@
 	min-height: 720px
 	width: 100%
 	background: #00247c
-
+	+r(767)
+		min-height: auto
+		padding-top: 30px
+		padding-bottom: 30px
+	+r(425)
+		padding-top: 20px
+		padding-bottom: 20px
 	&__info
 		padding-top: 113px
 		padding-left: 15px
 		padding-right: 15px
 		color: #ffffff
 		margin-bottom: 96px
+		+r(992)
+			padding-top: 30px
+		+r(767)
+			padding-top: 0
+
 .my-slider
 	&__section
 		height: 720px
@@ -35,6 +46,9 @@
 		+r(767)
 			display: none
 	&__block
+		+r(425)
+			padding-left: 20px
+			padding-right: 20px
 		li
 			color: #ffffff
 			display: block
@@ -75,15 +89,15 @@
 			border-color: rgba(3, 166, 241, .2)
 			border-style: solid
 			border-radius: 50%
-			+r(413)
-				display: none
+			+r(992)
+				top: -40px
 		.slick-prev
 			left: 17px
 			&::before
 				opacity: 1
-				content: url("../../img/prev_w.png")
+				content: url("../../img/prev.svg")
 		.slick-next
 			left: 62px
 			&::before
 				opacity: 1
-				content: url("../../img/next_w.png")
+				content: url("../../img/next.svg")
