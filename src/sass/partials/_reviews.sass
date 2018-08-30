@@ -15,19 +15,21 @@
 			width: 36px
 			height: 36px
 			top: 152px
-			border-width: 1px
-			border-color: rgba(22, 36, 50, .2);
-			border-style: solid
+			border: 1px rgba(22, 36, 50, .2) solid
 			border-radius: 50%
 		.slick-prev
-			left: 786px
+			left: 107%
 			z-index: 30
+			+r(1200)
+				left: 106%
+			+r(992)
+				left: 104%
 			&::before
 				opacity: 1
 				color: $main-color
 				content: url("../../img/prev_d.svg")
 		.slick-next
-			left: 832px
+			left: 113%
 			z-index: 30
 			&::before
 				opacity: 1
