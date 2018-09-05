@@ -1,7 +1,8 @@
 .main-form
 	position: relative
 	width: 100%
-	padding-top: 84px
+	padding-top: 80px
+	padding-bottom: 40px
 	+r(991)
 		padding-top: 40px
 		padding-bottom: 40px
@@ -32,12 +33,13 @@
 		color: #7b818a
 		position: relative
 		&::before
-			background: url("../img/sea-water.svg") no-repeat center
+			background: #03a6f1
 			content: ''
 			width: 65px
-			height: 20px
+			height: 8px
 			position: absolute
-			bottom: -37px
+			bottom: -32px
+			border-radius: 15px
 		+r(992)
 			text-align: center
 			font-size: 20px
@@ -119,6 +121,7 @@
 			max-width: 325px
 			+r(767)
 				margin: 0 auto
+				text-align: left
 			input
 				position: absolute
 				opacity: 0

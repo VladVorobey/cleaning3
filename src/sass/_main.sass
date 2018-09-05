@@ -120,6 +120,8 @@ input[type="text"], input[type="email"]
 		padding-left: 1px
 		width: 170px
 		padding-top: 10px
+		+r(425)
+			padding-left: 3px
 	a
 		color: #222222
 		display: block
@@ -139,12 +141,13 @@ input[type="text"], input[type="email"]
 		letter-spacing: -0.01em
 		position: relative
 		&::before
-			background: url("../img/sea-water.svg") no-repeat center
+			background: #03a6f1
 			content: ''
 			width: 65px
-			height: 20px
+			height: 8px
 			position: absolute
 			bottom: -32px
+			border-radius: 15px
 			+r(992)
 				left: 50%
 				transform: translateX(-50%)

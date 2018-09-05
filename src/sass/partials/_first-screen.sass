@@ -9,7 +9,7 @@
 	text-align: center
 	+r(992)
 		padding-top: 40px
-		padding-bottom: 15px
+		padding-bottom: 30px
 		min-height: auto
 
 	h1,h2
@@ -51,7 +51,6 @@
 		+r(767)
 			flex-direction: column
 			align-items: center
-
 		a
 			border-radius: 24px
 			background-color: rgb(3, 166, 241)
@@ -69,8 +68,8 @@
 			&:last-child
 				background-color: rgb(0, 36, 124)
 				box-shadow: 10px 17.321px 30px 0 rgba(0, 36, 124, 0.3)
-				+r(425)
-					margin-bottom: 35px
+				+r(900)
+					margin-bottom: 50px
 			&:hover
 				transform: translateY(3px)
 				box-shadow: 10px 17.321px 30px 0 rgba(73, 175, 236, 0.6)
@@ -79,26 +78,56 @@
 
 	&__nav
 		color: $main-color
-		position: absolute
 		z-index: 30
+		background: linear-gradient(to right, rgba(3, 166, 241, .3), rgba(3, 166, 241, 0))
+		margin-top: 50px
 		+r(1199)
 			display: none
 
 		li
+			font-size: 20px
 			margin: 10px auto
 			text-align: left
 			position: relative
-			padding-left: 13px
+			padding-left: 20px
 			transition: all .3s
 		.slick-current
 			li
 				color: #03a6f1
 				&::before
-					content: '';
-					width: 5px;
-					height: 5px;
-					position: absolute;
+					content: ''
+					width: 5px
+					height: 5px
+					position: absolute
 					background: #03a6f1
-					border-radius: 3px;
-					top: 7px;
-					left: 0;
+					border-radius: 3px
+					top: 8px
+					left: 8px
+	&__elem
+		.slick-prev, .slick-next
+			background: rgba(3, 166, 241, .2)
+			width: 36px
+			height: 36px
+			border: 1px rgba(3, 166, 241, .2) solid
+			border-radius: 50%
+			top: 50%
+			transform: translateY(-50%)
+			+r(600)
+				top: 95%
+				transform: translateY(-5%)
+		.slick-prev
+			transform: translateX(-5px) translateY(-50%)
+			&::before
+				opacity: 1
+				content: url("../../img/prev_d.svg")
+			+r(600)
+				left: 35%
+
+		.slick-next
+			transform: translateX(-5px) translateY(-50%)
+			&::before
+				opacity: 1
+				content: url("../../img/next_d.svg")
+			+r(600)
+				right: 35%
+

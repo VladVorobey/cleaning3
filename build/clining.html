@@ -27,7 +27,16 @@
         <input type="hidden" name="form_subject" value="Заявка с формы">
         <div class="main-form__form_wrapper d-flex flex-column align-items-center">
           <input class="main-form__form_main focus_contact" type="text" name="name" placeholder="Введите Имя" required>
-          <input class="main-form__form_main" type="email" name="email" placeholder="Введите E-mail" required> </div>
+          <input class="main-form__form_main" type="email" name="email" placeholder="Введите E-mail" required>
+          <select class=main-form__form_droplist "" name="droplist" required>
+            <option value="Услуга не выбрана">Выберете интересующую вас услугу</option>
+            <option value="Клининг">Клининг</option>
+            <option value="Експлуатация">Експлуатация</option>
+            <option value="Пожарная безопасность">Пожарная безопасность</option>
+            <option value="Энергосети">Энергосети</option>
+            < <option value="Водоснабжение">Водоснабжение</option>
+          </select>
+        </div>
         <div class="main-form__form_flex d-flex flex-column align-items-center">
           <button type="submit" class="button" name="submit">Отправить заявку</button>
           <label class="modal_checkbox">
@@ -180,7 +189,7 @@
 
         </ul>
       </div>
-      <div class="col-12 col-lg-12 col-xl-12">
+      <div class="col-12 col-lg-12 col-xl-9">
         <ul class="first-screen__elem">
           <li>
             <div class="container">
