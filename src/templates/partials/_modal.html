@@ -4,23 +4,25 @@
     Оставьте заявку,<br>
     <strong>мы свяжемся с Вами</strong>
   </h5>
-  <form action="sendmail.php" method="post">
+  <form action="sendmail.php" method="post" id="form">
     <input type="hidden" name="project_name" value="cleaning3">
     <input type="hidden" name="admin_email" value="sparrowvladislav@gmail.com">
     <input type="hidden" name="form_subject" value="Заявка с формы">
     <div class="main-form__form_wrapper d-flex flex-column align-items-center">
-
-      <input class="main-form__form_main focus_contact" type="text" name="name" placeholder="Введите Имя" required >
-      <input class="main-form__form_main" type="email" name="email" placeholder="Введите E-mail" required >
-      <select class=main-form__form_droplist"" name="droplist" required>
-        <option value="Услуга не выбрана">Выберете интересующую вас услугу</option>
+      <label class="block__wrapper">
+        <input class="main-form__form_main focus_contact" type="text" name="name" placeholder="Введите Имя" required >
+      </label>
+      <label class="block__wrapper">
+        <input class="main-form__form_main" type="email" name="email" placeholder="Введите E-mail" required >
+      </label>
+      <select class="main-form__form_droplist" name="droplist">
+        <option value="Услуга не выбрана">Выберете услугу</option>
         <option value="Клининг">Клининг</option>
         <option value="Експлуатация">Експлуатация</option>
         <option value="Пожарная безопасность">Пожарная безопасность</option>
-        <option value="Энергосети">Энергосети</option><
+        <option value="Энергосети">Энергосети</option>
         <option value="Водоснабжение">Водоснабжение</option>
       </select>
-
     </div>
     <div class="main-form__form_flex d-flex flex-column align-items-center">
 
@@ -32,6 +34,15 @@
     </label>
     </div>
   </form>
+</div>
+
+<div id="popup-modal__ty" class="mfp-hide white-popup-block modal-form zoom-anim-dialog">
+  <button class="popup-modal__ty_close close">
+    Close
+    <span class="modal__close-line"></span>
+  </button>
+  <h3>Спасибо за заказ</h3>
+  <p>Скоро мы Вам перезвоним!</p>
 </div>
 
 

@@ -1,6 +1,9 @@
 import $ from 'jquery';
+import '../../node_modules/jquery-validation/dist/jquery.validate.min';
 import slick from 'slick-carousel';
 import magnificPopup from 'magnific-popup';
+import '../../node_modules/jquery-popup-overlay/jquery.popupoverlay';
+
 
 //------------- GOOGLE MAP ----------
 var map;
@@ -163,6 +166,22 @@ $(document).ready(function() {
   });
 
 
+  $('.popup-modal__ty').magnificPopup({
+    type: 'inline',
+    preloader: false,
+    closeOnBgClick: true,
+    removalDelay: 300,
+    closeBtnInside: false,
+    showCloseBtn: true,
+    mainClass: 'my-mfp-zoom-in',
+    focus: '.focus_contact'
+    //modal: true
+  });
+  $(document).on('click', '.popup-modal__ty_close', function(e) {
+    e.preventDefault();
+    $.magnificPopup.close('popup-modal__ty');
+  });
+
   let modalDataContentDescription;
   let modalDataContentTitle;
   let modalDataContentSubTitle;
@@ -205,23 +224,34 @@ $(document).ready(function() {
     $('header').toggleClass('active'),
     $('.menu__btn').toggleClass('active');
   });
+  // --------- FORM VALIDATOR ----------
 
-  //--------- E-mail Ajax Send
-  $('form').submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: 'POST',
-      url: 'sendmail.php', //Change
-      data: th.serialize()
-    }).done(function() {
-      alert('Спасибо за заявку!');
-      setTimeout(function() {
-        // Done Functions
-        th.trigger('reset');
-      }, 1000);
-    });
-    return false;
+
+
+  $('#form').validate({
+    rules: {
+      name: 'required'
+    },
+    messages: {
+      name: 'Введите Ваше имя',
+      email: 'Введите Ваш email'
+    },
   });
+
+  function ajaxSend(formName, data) {
+    jQuery.ajax({
+      type: 'POST',
+      url: 'sendmail.php',
+      data: data,
+      success: function() {
+        $('.#').popup('hide');
+        $('#thanks').popup('show');
+        setTimeout(function() {
+          $(formName).trigger('reset');
+        }, 2000);
+      }
+    });
+  }
 });
 
 
