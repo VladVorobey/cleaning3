@@ -12,15 +12,10 @@
       <div class="col-lg-8">
         <div class="main-form__form">
           <form action="sendmail.php" method="post">
-            <input type="hidden" name="project_name" value="cleaning3">
-            <input type="hidden" name="admin_email" value="sparrowvladislav@gmail.com">
-            <input type="hidden" name="form_subject" value="Заявка с формы">
             <div class="main-form__form_wrapper d-flex justify-content-around">
+                  <input class="main-form__form_name" type="text" name="name" placeholder="Введите Имя" required >
 
-                  <input class="main-form__form_main" type="text" name="name" placeholder="Введите Имя" required >
-
-                  <input class="main-form__form_main" type="email" name="email" placeholder="Введите E-mail" required >
-
+                  <input class="main-form__form_email" type="email" name="email" placeholder="Введите E-mail" required >
             </div>
 
             <div class="main-form__form_flex">

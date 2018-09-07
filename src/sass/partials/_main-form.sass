@@ -77,7 +77,7 @@
 				display: flex
 				flex-direction: column
 				margin: 0 auto 15px
-		&_main
+		&_name, &_email
 			width: 270px
 			height: 35px
 			padding-top: 2px
@@ -87,17 +87,16 @@
 			+r(767)
 				margin: 15px auto
 				width: 230px
-			&:nth-child(1)
+		&_name
+			padding-left: 28px
+			background: url("../../img/man-user.svg") 4px no-repeat
+			+r(767)
+				margin: 10px auto
+		&_email
+			padding-left: 28px
+			background: url('../../img/black-envelope.svg') no-repeat
+			+r(767)
 				padding-left: 28px
-				background: url("../../img/man-user.svg") 4px no-repeat
-				margin-right: 30px
-				+r(767)
-					margin: 10px auto
-			&:nth-child(2)
-				padding-left: 23px
-				background: url('../../img/black-envelope.svg') no-repeat
-				+r(767)
-					padding-left: 28px
 		&_flex
 			display: flex
 			justify-content: space-between

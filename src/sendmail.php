@@ -1,5 +1,5 @@
 <?php
-	$SITE_TITLE = 'Корпорация Городских Концессий';
+	$SITE_TITLE = 'Клинигновая компания CLEANING';
 	$SITE_DESCR = '';
 
 	if ( isset($_POST) ) {
