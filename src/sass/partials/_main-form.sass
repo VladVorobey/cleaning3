@@ -3,17 +3,20 @@
 	width: 100%
 	padding-top: 80px
 	padding-bottom: 40px
+	+r(992)
+		display: block
+		text-align: center
 	+r(991)
 		padding-top: 40px
 		padding-bottom: 40px
 	+r(425)
 		text-align: center
-	h3, p
+	h2, p
 		letter-spacing: 0.01em
 		margin-left: -15px
 		+r(575)
 			margin-left: 0
-	h3
+	h2
 		font-size: 36px
 		line-height: 30px
 		padding-top: 54px
@@ -32,10 +35,11 @@
 		line-height: 36px
 		color: #7b818a
 		position: relative
+		display: inline-block
 		&::before
 			background: #03a6f1
 			content: ''
-			width: 65px
+			width: 100%
 			height: 8px
 			position: absolute
 			bottom: -32px
@@ -89,12 +93,12 @@
 				width: 230px
 		&_name
 			padding-left: 28px
-			background: url("../../img/man-user.svg") 4px no-repeat
+			background: url("../img/man-user.svg") 4px no-repeat
 			+r(767)
 				margin: 10px auto
 		&_email
 			padding-left: 28px
-			background: url('../../img/black-envelope.svg') no-repeat
+			background: url('../img/black-envelope.svg') no-repeat
 			+r(767)
 				padding-left: 28px
 		&_flex

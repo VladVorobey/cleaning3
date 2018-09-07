@@ -4,6 +4,7 @@ import magnificPopup from 'magnific-popup';
 import '../../node_modules/jquery-popup-overlay/jquery.popupoverlay';
 import '../../node_modules/jquery-mask-plugin/dist/jquery.mask.min';
 import '../../node_modules/jquery-validation/dist/jquery.validate.min';
+import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min';
 //------------- GOOGLE MAP ----------
 var map;
 function initMap() {
