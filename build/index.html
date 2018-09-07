@@ -604,21 +604,21 @@
     </section>
     <div id="modal-form" class="modal">
       <p>
-        <a class="popup-modal-dismiss close" href="#">x</a>
+        <a class="modal-form_close close" href="#">x</a>
       </p>
       <h5> Оставьте заявку,
         <br>
         <strong>мы свяжемся с Вами</strong>
       </h5>
-      <form action="sendmail.php" method="post">
+      <form action="sendmail.php" method="post" class="form">
         <input type="hidden" name="project_name" value="cleaning3">
         <input type="hidden" name="admin_email" value="sparrowvladislav@gmail.com">
         <input type="hidden" name="form_subject" value="Заявка с формы">
         <div class="main-form__form_wrapper d-flex flex-column align-items-center">
-          <input class="main-form__form_main focus_contact" type="text" name="name" placeholder="Введите Имя" required>
-          <input class="main-form__form_main" type="email" name="email" placeholder="Введите E-mail" required>
+          <input class="main-form__form_name focus_contact" type="text" name="name" placeholder="Введите Имя" required>
+          <input class="main-form__form_email" type="email" name="email" placeholder="Введите E-mail" required>
           <select class=main-form__form_droplist "" name="droplist" required>
-            <option value="Услуга не выбрана">Выберете интересующую вас услугу</option>
+            <option value="Услуга не выбрана">Выберете услугу</option>
             <option value="Клининг">Клининг</option>
             <option value="Експлуатация">Експлуатация</option>
             <option value="Пожарная безопасность">Пожарная безопасность</option>
