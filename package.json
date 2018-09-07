@@ -56,7 +56,6 @@
     "htmlhint": "^0.9.13",
     "husky": "^0.14.3",
     "jquery": "^3.1.1",
-    "jquery-validation": "^1.17.0",
     "lint-staged": "^7.0.4",
     "lodash": "^4.3.0",
     "lost": "^7.1.0",
@@ -75,6 +74,8 @@
     "webpack-glsl-loader": "^1.0.1"
   },
   "dependencies": {
-    "jquery-popup-overlay": "^1.7.4"
+    "jquery-mask-plugin": "^1.14.15",
+    "jquery-popup-overlay": "^1.7.4",
+    "jquery-validation": "^1.17.0"
   }
 }

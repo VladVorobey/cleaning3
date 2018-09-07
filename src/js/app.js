@@ -1,11 +1,11 @@
 import $ from 'jquery';
-import '../../node_modules/jquery-validation/dist/jquery.validate.min';
 import slick from 'slick-carousel';
 import magnificPopup from 'magnific-popup';
+import '../../node_modules/jquery-validation/dist/jquery.validate.min';
 import '../../node_modules/jquery-popup-overlay/jquery.popupoverlay';
-
-
+import '../../node_modules/jquery-mask-plugin/dist/jquery.mask.min';
 //------------- GOOGLE MAP ----------
+
 var map;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
@@ -166,22 +166,6 @@ $(document).ready(function() {
   });
 
 
-  $('.popup-modal__ty').magnificPopup({
-    type: 'inline',
-    preloader: false,
-    closeOnBgClick: true,
-    removalDelay: 300,
-    closeBtnInside: false,
-    showCloseBtn: true,
-    mainClass: 'my-mfp-zoom-in',
-    focus: '.focus_contact'
-    //modal: true
-  });
-  $(document).on('click', '.popup-modal__ty_close', function(e) {
-    e.preventDefault();
-    $.magnificPopup.close('popup-modal__ty');
-  });
-
   let modalDataContentDescription;
   let modalDataContentTitle;
   let modalDataContentSubTitle;
@@ -224,18 +208,39 @@ $(document).ready(function() {
     $('header').toggleClass('active'),
     $('.menu__btn').toggleClass('active');
   });
-  // --------- FORM VALIDATOR ----------
 
+  //--------- E-mail Ajax Send
+  $('input[type="tel"]').mask('+0 (000) 000-00-00');
 
+  jQuery.validator.addMethod('phoneno', function(phone_number, element) {
+    return this.optional(element) || phone_number.match(/\+[0-9]{1}\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}/);
+  }, 'Введите Ваш телефон');
 
-  $('#form').validate({
-    rules: {
-      name: 'required'
-    },
-    messages: {
-      name: 'Введите Ваше имя',
-      email: 'Введите Ваш email'
-    },
+  $('.form').each(function(index, el) {
+    $(el).addClass('form-' + index);
+
+    $('.form-' + index).validate({
+      rules: {
+        phone: {
+          required: true,
+          phoneno: true
+        },
+        name: 'required',
+      },
+      messages: {
+        name: 'Введите Ваше имя',
+        phone: 'Введите Ваш телефон',
+      },
+      submitHandler: function(form) {
+        var t = {
+          name: jQuery('.form-' + index).find('input[name=name]').val(),
+          phone: jQuery('.form-' + index).find('input[name=phone]').val(),
+          subject: jQuery('.form-' + index).find('input[name=subject]').val()
+        };
+        ajaxSend('.form-' + index, t);
+      }
+    });
+
   });
 
   function ajaxSend(formName, data) {
@@ -244,7 +249,7 @@ $(document).ready(function() {
       url: 'sendmail.php',
       data: data,
       success: function() {
-        $('.#').popup('hide');
+        $('.modal').popup('hide');
         $('#thanks').popup('show');
         setTimeout(function() {
           $(formName).trigger('reset');
@@ -252,6 +257,7 @@ $(document).ready(function() {
       }
     });
   }
+  $('.modal').popup({transition: 'all 0.3s'});
 });
 
 

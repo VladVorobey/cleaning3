@@ -1,28 +1,26 @@
-<div id="modal-form" class="mfp-hide white-popup-block modal-form zoom-anim-dialog">
+<div id="modal-form" class="modal">
   <p><a class="popup-modal-dismiss close" href="#">x</a></p>
   <h5>
     Оставьте заявку,<br>
     <strong>мы свяжемся с Вами</strong>
   </h5>
-  <form action="sendmail.php" method="post" id="form">
+  <form action="sendmail.php" method="post" class="form">
     <input type="hidden" name="project_name" value="cleaning3">
     <input type="hidden" name="admin_email" value="sparrowvladislav@gmail.com">
     <input type="hidden" name="form_subject" value="Заявка с формы">
     <div class="main-form__form_wrapper d-flex flex-column align-items-center">
-      <label class="block__wrapper">
-        <input class="main-form__form_main focus_contact" type="text" name="name" placeholder="Введите Имя" required >
-      </label>
-      <label class="block__wrapper">
-        <input class="main-form__form_main" type="email" name="email" placeholder="Введите E-mail" required >
-      </label>
-      <select class="main-form__form_droplist" name="droplist">
-        <option value="Услуга не выбрана">Выберете услугу</option>
+
+      <input class="main-form__form_main focus_contact" type="text" name="name" placeholder="Введите Имя" required >
+      <input class="main-form__form_main" type="email" name="email" placeholder="Введите E-mail" required >
+      <select class=main-form__form_droplist"" name="droplist" required>
+        <option value="Услуга не выбрана">Выберете интересующую вас услугу</option>
         <option value="Клининг">Клининг</option>
         <option value="Експлуатация">Експлуатация</option>
         <option value="Пожарная безопасность">Пожарная безопасность</option>
-        <option value="Энергосети">Энергосети</option>
+        <option value="Энергосети">Энергосети</option><
         <option value="Водоснабжение">Водоснабжение</option>
       </select>
+
     </div>
     <div class="main-form__form_flex d-flex flex-column align-items-center">
 
@@ -36,15 +34,12 @@
   </form>
 </div>
 
-<div id="popup-modal__ty" class="mfp-hide white-popup-block modal-form zoom-anim-dialog">
-  <button class="popup-modal__ty_close close">
-    Close
-    <span class="modal__close-line"></span>
-  </button>
-  <h3>Спасибо за заказ</h3>
-  <p>Скоро мы Вам перезвоним!</p>
-</div>
+<div class="modal" id="thanks">
+  <button class="close thanks_close" type="button"></button>
 
+  <h2>Спасибо <br>за доверие!</h2>
+  <p>Мы обязательно с вами свяжемся!</p>
+</div>
 
 <div id="modal-servises" class="mfp-hide white-popup-block modal-servises zoom-anim-dialog">
   <p><a class="popup-modal-dismiss close close-servises" href="#modal-form">x</a></p>

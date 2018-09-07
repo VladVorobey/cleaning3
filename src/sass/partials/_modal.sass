@@ -24,32 +24,10 @@
 		&__form
 			&_main
 				margin: 20px 0
-				position: relative
-				display: block
 			&_flex
 				padding: 0
 			&_wrapper
 				margin-bottom: 0
-				label.error
-					background: #ed1c24
-					position: absolute
-					transform: translateY(-90px) translateX(50px)
-					padding: 5px 10px
-					color: #ffffff
-					border-radius: 8px
-					transition: all .5s
-					&::before
-						content: ''
-						width: 10px
-						height: 10px
-						background: #ed1c24
-						position: absolute
-						transform: rotate(45deg)
-						bottom: -5px
-						left: 20px
-					+r(768)
-						transform: translateY(-63px) translateX(30px)
-						padding: 0 10px
 			&_checkbox
 				strong
 					&::after
@@ -69,18 +47,6 @@
 				font-size: 16px
 				+r(420)
 					font-size: 14px
-		.block__wrapper
-			position: relative
-	select
-		border-bottom: 1px solid #caccd0
-		border-top: 0
-		border-right: 0
-		border-left: 0
-		width: 270px
-		padding: 8px 0 8px 18px
-		color: $main-color
-		+r(767)
-			width: 230px
 	.close
 		display: block
 		text-align: right
@@ -109,5 +75,3 @@
 	top: 10px
 	right: 20px
 	z-index: 100
-
-
