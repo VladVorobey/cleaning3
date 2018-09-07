@@ -59,15 +59,13 @@
 				padding-left: 26px
 				margin-bottom: 19px
 				a
-					color: $main-color
+					color: #7b818a
 				&:hover
 					transition: all .3s
-					transform: translateX(2px)
+					text-decoration: underline
 				&:before
 					background: url("/img/call-answer.svg") left top no-repeat
 					background-size: cover
-
-
 			&:nth-of-type(2)
 				font-family: $medium-font
 				font-size: 16px
@@ -78,7 +76,7 @@
 				margin-bottom: 24px
 				a
 					color: #7b818a
-				&:before
+				&:before, &:focus
 					background: url("/img/placeholder-filled-point.svg") left top no-repeat
 					background-size: cover
 			&:nth-of-type(3)
@@ -94,9 +92,9 @@
 				&:before
 					background: url("/img/blue-envelope.svg") left top no-repeat
 					background-size: cover
-				&:hover
+				&:hover, &:focus
 					transition: all .3s
-					transform: translateX(2px)
+					text-decoration: underline
 	&__nav
 		padding-top: 66px
 		min-height: 240px

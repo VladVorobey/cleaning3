@@ -150,3 +150,38 @@
 					border-width: 0 2px 2px 0
 					transform: rotate(45deg)
 					z-index: 20
+		label.error
+			background: #ed1c24
+			position: absolute
+			padding: 3px 15px
+			color: #ffffff
+			border-radius: 8px
+			transition: all .5s
+			top: 20px
+			left: 0
+			transform: translateX(400px)
+			&::before
+				content: ''
+				width: 10px
+				height: 10px
+				background: #ed1c24
+				position: absolute
+				transform: rotate(45deg)
+				bottom: -5px
+				left: 20px
+			&:nth-child(2)
+				transform: translateX(105px)
+			+r(1200)
+				transform: translateX(325px)
+			+r(992)
+				top: 60px
+				transform: translateX(355px)
+			+r(769)
+				transform: translateX(150px) translateY(56px)
+				&:nth-child(2)
+					transform: translateX(150px) translateY(-5px)
+			+r(500)
+				left: 20%
+				transform: translateX(0px) translateY(56px)
+				&:nth-child(2)
+					transform: translateX(0px) translateY(-5px)
