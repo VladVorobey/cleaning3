@@ -2,7 +2,8 @@ import $ from 'jquery';
 import slick from 'slick-carousel';
 import magnificPopup from 'magnific-popup';
 import '../../node_modules/jquery-popup-overlay/jquery.popupoverlay';
-
+import '../../node_modules/jquery-mask-plugin/dist/jquery.mask.min';
+import '../../node_modules/jquery-validation/dist/jquery.validate.min';
 //------------- GOOGLE MAP ----------
 var map;
 function initMap() {
@@ -208,22 +209,49 @@ $(document).ready(function() {
   });
 
   //--------- E-mail Ajax Send
-  $('.form').submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: 'POST',
-      url: 'sendmail.php', //Change
-      data: th.serialize()
-    }).done(function() {
-      $('.modal').popup('hide');
-      $('#thanks').popup('show');
-      setTimeout(function() {
-        // Done Functions
-        th.trigger('reset');
-      }, 1000);
+  $('input[type="tel"]').mask('+0 (000) 000-00-00');
+
+  jQuery.validator.addMethod('phoneno', function(phone_number, element) {
+    return this.optional(element) || phone_number.match(/\+[0-9]{1}\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}/);
+  }, 'Введите Ваш телефон');
+
+  $('.form').each(function(index, el) {
+    $(el).addClass('form-' + index);
+
+    $('.form-' + index).validate({
+      rules: {
+        phone: {
+          required: true,
+          phoneno: true
+        },
+        name: 'required',
+      },
+      messages: {
+        name: 'Введите Ваше имя',
+        email: 'Введите Ваш email',
+      },
+      submitHandler: function(form) {
+        var t = $('.form-' + index).serialize();
+        ajaxSend('.form-' + index, t);
+      }
     });
-    return false;
+
   });
+
+  function ajaxSend(formName, data) {
+    jQuery.ajax({
+      type: 'POST',
+      url: 'sendmail.php',
+      data: data,
+      success: function() {
+        $('.modal').popup('hide');
+        $('#thanks').popup('show');
+        setTimeout(function() {
+          $(formName).trigger('reset');
+        }, 2000);
+      }
+    });
+  }
   $('.modal').popup({transition: 'all 0.3s'});
 });
 
