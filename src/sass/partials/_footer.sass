@@ -64,7 +64,7 @@
 					transition: all .3s
 					text-decoration: underline
 				&:before
-					background: url("/img/call-answer.svg") left top no-repeat
+					background: url("../img/call-answer.svg") left top no-repeat
 					background-size: cover
 			&:nth-of-type(2)
 				font-family: $medium-font
@@ -77,7 +77,7 @@
 				a
 					color: #7b818a
 				&:before, &:focus
-					background: url("/img/placeholder-filled-point.svg") left top no-repeat
+					background: url("../img/placeholder-filled-point.svg") left top no-repeat
 					background-size: cover
 			&:nth-of-type(3)
 				color: blue
@@ -90,7 +90,7 @@
 				a
 					color: #7b818a
 				&:before
-					background: url("/img/blue-envelope.svg") left top no-repeat
+					background: url("../img/blue-envelope.svg") left top no-repeat
 					background-size: cover
 				&:hover, &:focus
 					transition: all .3s
@@ -100,6 +100,8 @@
 		min-height: 240px
 		background: $main-color
 		padding-left: 20px
+		+r(992)
+			padding-top: 80px
 		+r(610)
 			padding-top: 20px
 			padding-left: 0
