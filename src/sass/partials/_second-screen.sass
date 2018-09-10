@@ -27,16 +27,19 @@
 			display: flex
 			width: 100%
 			position: relative
+			+r(1200)
+				justify-content: center
 			+r(992)
 				text-align: center
-			+r(545)
+			+r(567)
 				flex-direction: column
 
 			&_left,&_right
 				width: 50%
 				margin: 87px 0
-				+r(545)
+				+r(567)
 					width: 100%
+					margin: 30px 0
 				+r(545)
 					margin: 0
 
@@ -45,25 +48,28 @@
 				margin-right: 10px
 				+r(1200)
 					margin-left: 10px
-				+r(998)
+				+r(992)
 					margin-left: 60px
 				+r(767)
 					margin-left: 0
+					margin-right: 0
 
 			&_right
 				margin-right: 60px
 				margin-left: 10px
 				+r(1200)
 					margin-right: 10px
-				+r(998)
+				+r(992)
 					margin-right: 60px
 				+r(767)
 					margin-right: 0
+					margin-left: 0
 
 		&__elem
 			padding: 22px 20px
 			width: 250px
 			margin-bottom: 11px
+
 			&:last-child
 				margin-bottom: 0
 			img
@@ -89,7 +95,7 @@
 					color: $main-color
 					&:last-child
 						color: #7b818a
-			+r(545)
+			+r(567)
 				margin: 0 auto
 	.services-text
 		padding-top: 106px
@@ -98,7 +104,6 @@
 			margin-left: 0
 			padding-top: 40px
 			padding-bottom: 0
-
 		+r(575)
 			padding: 30px 0 0 0
 		&__title
@@ -113,7 +118,8 @@
 			font-weight: 100
 			+r(992)
 				text-align: center
-			+r(575)
+				font-size: 30px
+			+r(425)
 				font-size: 24px
 		strong
 			display: block

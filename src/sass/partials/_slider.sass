@@ -5,7 +5,7 @@
 	+r(767)
 		min-height: auto
 		padding-top: 40px
-		padding-bottom: 40px
+		padding-bottom: 0
 
 	&__info
 		padding-top: 113px
@@ -15,17 +15,23 @@
 		margin-bottom: 96px
 		+r(992)
 			padding-top: 30px
+			margin-bottom: 56px
 		+r(767)
 			padding-top: 0
+
 
 .my-slider
 	&__section
 		height: 720px
+		+r(992)
+			height: auto
 		li
 			height: 310px
 			width: 510px
 			margin-top: 23px
 			margin-bottom: 23px
+			+r(768)
+				height: auto
 			img
 				margin-left: 70px
 				width: 430px
@@ -37,8 +43,11 @@
 					width: 370px
 					margin-left: 30px
 				+r(992)
-					width: 320px
-					margin-left: 15px
+					width: 510px
+					margin: 0 auto
+				+r(768)
+					width: 100%
+					height: auto
 		.slick-current
 			li
 				img
@@ -51,10 +60,11 @@
 						width: 430px
 						margin-left: 0
 					+r(992)
-						width: 340px
-						margin-left: 0
-		+r(767)
-			display: none
+						width: 510px
+						margin: 0 auto
+					+r(768)
+						width: 100%
+						height: auto
 	&__block
 		li
 			color: #ffffff
@@ -109,6 +119,8 @@
 			+r(767)
 				left: 45%
 				transform: translateX(-55%)
+			+r(567)
+				left: 42%
 		.slick-next
 			left: 62px
 			&::before
@@ -120,3 +132,5 @@
 			+r(767)
 				left: 55%
 				transform: translateX(-45%)
+			+r(567)
+				left: 56%

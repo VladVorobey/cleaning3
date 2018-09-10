@@ -2,17 +2,24 @@
 	width: 100%
 	position: relative
 	display: flex
-	+r(767)
-		display: none
+
 	img
 		width: 240px
 		height: 335px
+		margin: 0 auto
+		+r(768)
+
 	&__block
 		width: 100%
 		min-height: 390px
 		background: url("../img/reviews-bg.png") left top no-repeat
 		padding-top: 70px
 		position: relative
+		display: block
+		+r(992)
+			padding-top: 50px
+			text-align: center
+			background: url("../img/reviews-bg.png") left 140px no-repeat
 		.slick-prev, .slick-next
 			position: absolute
 			width: 36px
@@ -26,7 +33,10 @@
 			+r(1200)
 				left: 106%
 			+r(992)
-				left: 122%
+				left: -4%
+			+r(576)
+				left: 3%
+				border: 1px rgba(255, 255, 255, .7) solid
 			&::before
 				opacity: 1
 				color: $main-color
@@ -35,12 +45,15 @@
 			left: 113%
 			z-index: 30
 			+r(992)
-				left: 132%
+				left: 99%
+			+r(576)
+				left: 84%
+				border: 1px rgba(255, 255, 255, .7) solid
 			&::before
 				opacity: 1
 				color: $main-color
 				content: url("../img/next_d.svg")
 	&__title
-		+r(1200)
-			h4
-				font-size: 24px
+		+r(992)
+			padding-top: 0
+

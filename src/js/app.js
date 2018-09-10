@@ -43,8 +43,18 @@ $(document).ready(function() {
     arrows: false,
     autoplay: true,
     autoplaySpeed: 3000,
-
-
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          vertical: false,
+          centerMode: false,
+          centerPadding: '60px',
+        }
+      },
+    ]
   });
   $('.reviews__slider').slick({
     slidesToShow: 3,
@@ -58,6 +68,27 @@ $(document).ready(function() {
         breakpoint: 1200,
         settings: {
           slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 578,
+        settings: {
+          slidesToShow: 1,
           slidesToScroll: 1,
         }
       }
@@ -101,6 +132,14 @@ $(document).ready(function() {
     slidesToScroll: 1,
     dots: true,
     responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          dots: true
+        }
+      },
       {
         breakpoint: 992,
         settings: {
